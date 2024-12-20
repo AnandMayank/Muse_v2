@@ -1,6 +1,3 @@
 # Muse
 Code for 'Muse: A Multimodal Conversational Recommendation Dataset with Scenario-Grounded User Profiles'
-
-[example.pdf](https://github.com/user-attachments/files/18208545/example.pdf)
-[MUSE.pdf](https://github.com/user-attachments/files/18208542/MUSE.pdf)
-
+![example_222](https://github.com/user-attachments/assets/3bd2f940-dc3f-4618-afd5-8c1f068c269b)
