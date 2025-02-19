@@ -6,8 +6,8 @@ import random
 
 from tqdm import tqdm
 
-base_url = 'https://neudm.zeabur.app/v1'
-api_key = 'sk-2sEiilPsN7H8nx3y6fBb89192370487b9eF3373c6586E8Dd'
+base_url = 'base_url'
+api_key = 'api_key'
 client = OpenAI(base_url=base_url,
                         api_key=api_key)
 
