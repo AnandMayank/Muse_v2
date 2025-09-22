@@ -463,7 +463,7 @@ If you use MUSE in your research, please cite:
 
 - **GitHub Issues**: [Create an issue](https://github.com/AnandMayank/Muse_v2/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/AnandMayank/Muse_v2/discussions)
-- **Email**: [Contact maintainers](mailto:anand.mayank@example.com)
+- **Email**: [Contact maintainers](mailto:anandmayank698@gmail.com)
 
 ---
 
