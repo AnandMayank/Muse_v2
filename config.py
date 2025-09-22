@@ -12,7 +12,7 @@ from pathlib import Path
 # =============================================================================
 
 # OpenAI API Configuration
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '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')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', 'your-api-key')
 OPENAI_BASE_URL = os.getenv('OPENAI_BASE_URL', 'https://api.openai.com/v1')
 OPENAI_MODEL = os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo')  # Using smaller, cheaper model
 
@@ -114,36 +114,6 @@ def ensure_directories():
     
     return directories
 
-def validate_config():
-    """Validate configuration settings"""
-    issues = []
-    
-    # Check API configuration
-    if API_KEY in ['your-openai-api-key-here', 'key', 'api_key']:
-        issues.append("❌ API_KEY not configured properly")
-    
-    if API_BASE in ['base_url', 'api_base']:
-        issues.append("❌ API_BASE not configured properly")
-    
-    # Check file paths
-    if not Path(DATA_PATH).exists() and DATA_PATH != './updated_item_profile.json':
-        issues.append(f"❌ DATA_PATH file not found: {DATA_PATH}")
-    
-    # Check directories
-    try:
-        ensure_directories()
-    except Exception as e:
-        issues.append(f"❌ Cannot create directories: {e}")
-    
-    if issues:
-        print("Configuration Issues Found:")
-        for issue in issues:
-            print(f"  {issue}")
-        return False
-    else:
-        print("✅ Configuration validated successfully")
-        return True
-
 def get_config_summary():
     """Get a summary of current configuration"""
     return {
@@ -171,18 +141,4 @@ if __name__ == "__main__":
     
     # Show configuration summary
     summary = get_config_summary()
-    print(f"\n📊 Configuration Summary:")
-    print(f"API Configured: {'✅' if summary['api_configured'] else '❌'}")
-    print(f"Data Path Exists: {'✅' if summary['data_path_exists'] else '❌'}")
-    print(f"Output Directory: {summary['output_dir']}")
-    
-    print(f"\n🎯 Enabled Features:")
-    for feature, enabled in summary['features'].items():
-        print(f"  {feature}: {'✅' if enabled else '❌'}")
-    
-    if not is_valid:
-        print(f"\n🛠 To fix configuration issues:")
-        print(f"1. Set your OpenAI API key: export OPENAI_API_KEY='your-key-here'")
-        print(f"2. Or edit this file directly and replace placeholder values")
-        print(f"3. Ensure required data files exist")
-        print(f"4. Run: python config.py to validate again")
+   )
