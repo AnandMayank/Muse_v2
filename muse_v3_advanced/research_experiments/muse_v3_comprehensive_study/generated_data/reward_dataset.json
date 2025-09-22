@@ -1,0 +1,301 @@
+[
+  {
+    "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel.",
+    "tool_name": "recommend",
+    "arguments": {
+      "num_items": 5,
+      "user_profile": "general",
+      "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+    },
+    "reward": {
+      "utility_delta": 0.32000000000000006,
+      "cost_penalty": 2.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.398
+    }
+  },
+  {
+    "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel.",
+    "tool_name": "recommend",
+    "arguments": {
+      "num_items": 5,
+      "user_profile": "general",
+      "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+    },
+    "reward": {
+      "utility_delta": 0.32000000000000006,
+      "cost_penalty": 2.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.398
+    }
+  },
+  {
+    "context": "\u092e\u0941\u091d\u0947 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0915\u093f\u0924\u093e\u092c \u091a\u093e\u0939\u093f\u090f\u0964 \u0915\u0941\u091b \u0930\u094b\u092e\u093e\u0902\u091f\u093f\u0915 \u092f\u093e mystery genre \u092e\u0947\u0902\u0964",
+    "tool_name": "translate",
+    "arguments": {
+      "text": "\u092e\u0941\u091d\u0947 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0915\u093f\u0924\u093e\u092c \u091a\u093e\u0939\u093f\u090f\u0964 \u0915\u0941\u091b \u0930\u094b\u092e\u093e\u0902\u091f\u093f\u0915 \u092f\u093e mystery genre \u092e\u0947\u0902\u0964",
+      "source_lang": "auto",
+      "target_lang": "hi"
+    },
+    "reward": {
+      "utility_delta": 0.16000000000000003,
+      "cost_penalty": 0.3,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.5780000000000001
+    }
+  },
+  {
+    "context": "I want to compare iPhone 15 vs Samsung Galaxy S24. Which has better camera?",
+    "tool_name": "compare",
+    "arguments": {
+      "items": [
+        "I want to compare ",
+        "iPhone",
+        " 15 vs Samsung "
+      ],
+      "comparison_aspects": [
+        "price",
+        "features",
+        "reviews"
+      ]
+    },
+    "reward": {
+      "utility_delta": 0.2,
+      "cost_penalty": 1.5,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.378
+    }
+  },
+  {
+    "context": "Show me dresses similar to this image that are suitable for office wear.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "Show me dresses similar to this image that are sui",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "Show me dresses similar to this image that are suitable for office wear.",
+    "tool_name": "visual_search",
+    "arguments": {
+      "similarity_threshold": 0.8,
+      "image_description": "Show me dresses similar to this image that are suitable for office wear"
+    },
+    "reward": {
+      "utility_delta": 0.27999999999999997,
+      "cost_penalty": 3.5999999999999996,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.038000000000000006
+    }
+  },
+  {
+    "context": "Find me a laptop for gaming with good graphics card under $1500.",
+    "tool_name": "recommend",
+    "arguments": {
+      "num_items": 5,
+      "user_profile": "general",
+      "context": "Find me a laptop for gaming with good graphics card under $1500"
+    },
+    "reward": {
+      "utility_delta": 0.32000000000000006,
+      "cost_penalty": 2.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.398
+    }
+  },
+  {
+    "context": "Find me a laptop for gaming with good graphics card under $1500.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "me a laptop for gaming with good graphics card under $1500",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "I need help translating this product description to Hindi.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "help translating this product description to Hindi",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "What are the best wireless headphones for working out?",
+    "tool_name": "recommend",
+    "arguments": {
+      "num_items": 5,
+      "user_profile": "general",
+      "context": "What are the best wireless headphones for working out?"
+    },
+    "reward": {
+      "utility_delta": 0.32000000000000006,
+      "cost_penalty": 2.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.398
+    }
+  },
+  {
+    "context": "Compare these two jackets - which one is better for winter?",
+    "tool_name": "compare",
+    "arguments": {
+      "items": [
+        "Compare these two ",
+        "jackets",
+        "which one is better "
+      ],
+      "comparison_aspects": [
+        "price",
+        "features",
+        "reviews"
+      ]
+    },
+    "reward": {
+      "utility_delta": 0.2,
+      "cost_penalty": 1.5,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.378
+    }
+  },
+  {
+    "context": "Recommend something similar to this dress but in a different color.",
+    "tool_name": "recommend",
+    "arguments": {
+      "num_items": 5,
+      "user_profile": "general",
+      "context": "Recommend something similar to this dress but in a different color"
+    },
+    "reward": {
+      "utility_delta": 0.32000000000000006,
+      "cost_penalty": 2.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.398
+    }
+  },
+  {
+    "context": "Recommend something similar to this dress but in a different color.",
+    "tool_name": "visual_search",
+    "arguments": {
+      "similarity_threshold": 0.8,
+      "image_description": "Recommend something similar to this dress but in a different color"
+    },
+    "reward": {
+      "utility_delta": 0.27999999999999997,
+      "cost_penalty": 3.5999999999999996,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.038000000000000006
+    }
+  },
+  {
+    "context": "Find me skincare products for sensitive skin, preferably organic.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "me skincare products for sensitive skin, preferably organic",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "\u092e\u0941\u091d\u0947 \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f educational toys \u091a\u093e\u0939\u093f\u090f \u091c\u094b safe \u0939\u094b\u0902\u0964",
+    "tool_name": "translate",
+    "arguments": {
+      "text": "\u092e\u0941\u091d\u0947 \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f educational toys \u091a\u093e\u0939\u093f\u090f \u091c\u094b safe \u0939\u094b\u0902\u0964",
+      "source_lang": "auto",
+      "target_lang": "hi"
+    },
+    "reward": {
+      "utility_delta": 0.16000000000000003,
+      "cost_penalty": 0.3,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.5780000000000001
+    }
+  },
+  {
+    "context": "Help me find a gift for my tech-savvy teenager, budget around $200.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "a gift for my tech-savvy teenager, budget around $200",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "I need kitchen appliances for a small apartment, space-saving designs.",
+    "tool_name": "search",
+    "arguments": {
+      "query": "kitchen appliances for a small apartment, space-saving designs",
+      "category": "general",
+      "max_results": 10
+    },
+    "reward": {
+      "utility_delta": 0.24,
+      "cost_penalty": 1.0,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.518
+    }
+  },
+  {
+    "context": "I need kitchen appliances for a small apartment, space-saving designs.",
+    "tool_name": "visual_search",
+    "arguments": {
+      "similarity_threshold": 0.8,
+      "image_description": "I need kitchen appliances for a small apartment, space-saving designs"
+    },
+    "reward": {
+      "utility_delta": 0.27999999999999997,
+      "cost_penalty": 3.5999999999999996,
+      "success_bonus": 0.65,
+      "efficiency_bonus": 0.51,
+      "total_reward": 0.038000000000000006
+    }
+  }
+]

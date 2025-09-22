@@ -1,0 +1,403 @@
+[
+  {
+    "original_text": "I'm looking for running shoes under $100. I prefer Nike or Adidas brands.",
+    "augmented_text": "I'm looking for running shoes under $100. I prefer Nike or Adidas brands.",
+    "tool_calls": [],
+    "quality_score": 0.0,
+    "metadata": {
+      "reason": "no_suitable_insertions"
+    }
+  },
+  {
+    "original_text": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel.",
+    "augmented_text": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel [RECOMMEND(user_profile='general', context='Can you recommend a good smartphone for photograph')]  [RECOMMEND(user_profile='general', context='Can you recommend a good smartphone for photograph')] .",
+    "tool_calls": [
+      {
+        "tool_name": "recommend",
+        "arguments": {
+          "num_items": 5,
+          "user_profile": "general",
+          "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+        },
+        "position": 94,
+        "expected_output": null,
+        "confidence": 0.3825,
+        "cost": 2.0
+      },
+      {
+        "tool_name": "recommend",
+        "arguments": {
+          "num_items": 5,
+          "user_profile": "general",
+          "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+        },
+        "position": 94,
+        "expected_output": null,
+        "confidence": 0.3825,
+        "cost": 2.0
+      }
+    ],
+    "quality_score": 0.38360295790671217,
+    "metadata": {
+      "num_insertions": 2,
+      "avg_utility": 0.3825,
+      "total_cost": 4.0
+    }
+  },
+  {
+    "original_text": "मुझे एक अच्छी किताब चाहिए। कुछ रोमांटिक या mystery genre में।",
+    "augmented_text": "मुझे एक अच्छी किताब चाहिए। कुछ रोमांटिक या mystery genre में। [TRANSLATE({'text': 'मुझे एक अच्छी किताब चाहिए। कुछ रोमांटिक या mystery genre में।', 'source_lang': 'auto', 'target_lang': 'hi'})]",
+    "tool_calls": [
+      {
+        "tool_name": "translate",
+        "arguments": {
+          "text": "मुझे एक अच्छी किताब चाहिए। कुछ रोमांटिक या mystery genre में।",
+          "source_lang": "auto",
+          "target_lang": "hi"
+        },
+        "position": 61,
+        "expected_output": null,
+        "confidence": 0.40375,
+        "cost": 0.3
+      }
+    ],
+    "quality_score": 0.5337355769230769,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.40375,
+      "total_cost": 0.3
+    }
+  },
+  {
+    "original_text": "I want to compare iPhone 15 vs Samsung Galaxy S24. Which has better camera?",
+    "augmented_text": "I want to compare iPhone 15 vs Samsung Galaxy S24 [COMPARE({'items': ['I want to compare ', 'iPhone', ' 15 vs Samsung '], 'comparison_aspects': ['price', 'features', 'reviews']})] . Which has better camera?",
+    "tool_calls": [
+      {
+        "tool_name": "compare",
+        "arguments": {
+          "items": [
+            "I want to compare ",
+            "iPhone",
+            " 15 vs Samsung "
+          ],
+          "comparison_aspects": [
+            "price",
+            "features",
+            "reviews"
+          ]
+        },
+        "position": 49,
+        "expected_output": null,
+        "confidence": 0.36124999999999996,
+        "cost": 1.5
+      }
+    ],
+    "quality_score": 0.4937233009708738,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.36124999999999996,
+      "total_cost": 1.5
+    }
+  },
+  {
+    "original_text": "Show me dresses similar to this image that are suitable for office wear.",
+    "augmented_text": "Show me dresses similar to this image that are suitable for office wear [VISUAL_SEARCH({'similarity_threshold': 0.8, 'image_description': 'Show me dresses similar to this image that are suitable for office wear'})]  [SEARCH(query='Show me dresses similar to this image that are sui', category='general')] .",
+    "tool_calls": [
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "Show me dresses similar to this image that are sui",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 71,
+        "expected_output": null,
+        "confidence": 0.34,
+        "cost": 1.0
+      },
+      {
+        "tool_name": "visual_search",
+        "arguments": {
+          "similarity_threshold": 0.8,
+          "image_description": "Show me dresses similar to this image that are suitable for office wear"
+        },
+        "position": 71,
+        "expected_output": null,
+        "confidence": 0.31875,
+        "cost": 3.0
+      }
+    ],
+    "quality_score": 0.435671568627451,
+    "metadata": {
+      "num_insertions": 2,
+      "avg_utility": 0.329375,
+      "total_cost": 4.0
+    }
+  },
+  {
+    "original_text": "Find me a laptop for gaming with good graphics card under $1500.",
+    "augmented_text": "Find me a laptop for gaming with good graphics card under $1500 [SEARCH(query='me a laptop for gaming with good graphics card under $1500', category='general')]  [RECOMMEND(user_profile='general', context='Find me a laptop for gaming with good graphics car')] .",
+    "tool_calls": [
+      {
+        "tool_name": "recommend",
+        "arguments": {
+          "num_items": 5,
+          "user_profile": "general",
+          "context": "Find me a laptop for gaming with good graphics card under $1500"
+        },
+        "position": 63,
+        "expected_output": null,
+        "confidence": 0.3825,
+        "cost": 2.0
+      },
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "me a laptop for gaming with good graphics card under $1500",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 63,
+        "expected_output": null,
+        "confidence": 0.34,
+        "cost": 1.0
+      }
+    ],
+    "quality_score": 0.45806321839080466,
+    "metadata": {
+      "num_insertions": 2,
+      "avg_utility": 0.36125,
+      "total_cost": 3.0
+    }
+  },
+  {
+    "original_text": "I need help translating this product description to Hindi.",
+    "augmented_text": "I need help translating this product description to Hindi [SEARCH(query='help translating this product description to Hindi', category='general')] .",
+    "tool_calls": [
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "help translating this product description to Hindi",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 57,
+        "expected_output": null,
+        "confidence": 0.30600000000000005,
+        "cost": 1.0
+      }
+    ],
+    "quality_score": 0.4899675675675676,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.30600000000000005,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "original_text": "What are the best wireless headphones for working out?",
+    "augmented_text": "What are the best wireless headphones for working out? [RECOMMEND(user_profile='general', context='What are the best wireless headphones for working ')]",
+    "tool_calls": [
+      {
+        "tool_name": "recommend",
+        "arguments": {
+          "num_items": 5,
+          "user_profile": "general",
+          "context": "What are the best wireless headphones for working out?"
+        },
+        "position": 54,
+        "expected_output": null,
+        "confidence": 0.34425,
+        "cost": 2.0
+      }
+    ],
+    "quality_score": 0.47761228070175443,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.34425,
+      "total_cost": 2.0
+    }
+  },
+  {
+    "original_text": "Compare these two jackets - which one is better for winter?",
+    "augmented_text": "Compare these two jackets - which one is better for winter? [COMPARE({'items': ['Compare these two ', 'jackets', 'which one is better '], 'comparison_aspects': ['price', 'features', 'reviews']})]",
+    "tool_calls": [
+      {
+        "tool_name": "compare",
+        "arguments": {
+          "items": [
+            "Compare these two ",
+            "jackets",
+            "which one is better "
+          ],
+          "comparison_aspects": [
+            "price",
+            "features",
+            "reviews"
+          ]
+        },
+        "position": 59,
+        "expected_output": null,
+        "confidence": 0.36124999999999996,
+        "cost": 1.5
+      }
+    ],
+    "quality_score": 0.4752692307692308,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.36124999999999996,
+      "total_cost": 1.5
+    }
+  },
+  {
+    "original_text": "Recommend something similar to this dress but in a different color.",
+    "augmented_text": "Recommend something similar to this dress but in a different color [VISUAL_SEARCH({'similarity_threshold': 0.8, 'image_description': 'Recommend something similar to this dress but in a different color'})]  [RECOMMEND(user_profile='general', context='Recommend something similar to this dress but in a')] .",
+    "tool_calls": [
+      {
+        "tool_name": "recommend",
+        "arguments": {
+          "num_items": 5,
+          "user_profile": "general",
+          "context": "Recommend something similar to this dress but in a different color"
+        },
+        "position": 66,
+        "expected_output": null,
+        "confidence": 0.3825,
+        "cost": 2.0
+      },
+      {
+        "tool_name": "visual_search",
+        "arguments": {
+          "similarity_threshold": 0.8,
+          "image_description": "Recommend something similar to this dress but in a different color"
+        },
+        "position": 66,
+        "expected_output": null,
+        "confidence": 0.31875,
+        "cost": 3.0
+      }
+    ],
+    "quality_score": 0.4347230679156909,
+    "metadata": {
+      "num_insertions": 2,
+      "avg_utility": 0.35062499999999996,
+      "total_cost": 5.0
+    }
+  },
+  {
+    "original_text": "I want office furniture that's ergonomic and under $500 per piece.",
+    "augmented_text": "I want office furniture that's ergonomic and under $500 per piece.",
+    "tool_calls": [],
+    "quality_score": 0.0,
+    "metadata": {
+      "reason": "no_suitable_insertions"
+    }
+  },
+  {
+    "original_text": "Find me skincare products for sensitive skin, preferably organic.",
+    "augmented_text": "Find me skincare products for sensitive skin, preferably organic [SEARCH(query='me skincare products for sensitive skin, preferably organic', category='general')] .",
+    "tool_calls": [
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "me skincare products for sensitive skin, preferably organic",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 64,
+        "expected_output": null,
+        "confidence": 0.30600000000000005,
+        "cost": 1.0
+      }
+    ],
+    "quality_score": 0.49130243902439025,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.30600000000000005,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "original_text": "मुझे बच्चों के लिए educational toys चाहिए जो safe हों।",
+    "augmented_text": "मुझे बच्चों के लिए educational toys चाहिए जो safe हों। [TRANSLATE({'text': 'मुझे बच्चों के लिए educational toys चाहिए जो safe हों।', 'source_lang': 'auto', 'target_lang': 'hi'})]",
+    "tool_calls": [
+      {
+        "tool_name": "translate",
+        "arguments": {
+          "text": "मुझे बच्चों के लिए educational toys चाहिए जो safe हों।",
+          "source_lang": "auto",
+          "target_lang": "hi"
+        },
+        "position": 54,
+        "expected_output": null,
+        "confidence": 0.40375,
+        "cost": 0.3
+      }
+    ],
+    "quality_score": 0.5294343128781331,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.40375,
+      "total_cost": 0.3
+    }
+  },
+  {
+    "original_text": "Help me find a gift for my tech-savvy teenager, budget around $200.",
+    "augmented_text": "Help me find a gift for my tech-savvy teenager, budget around $200 [SEARCH(query='a gift for my tech-savvy teenager, budget around $200', category='general')] .",
+    "tool_calls": [
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "a gift for my tech-savvy teenager, budget around $200",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 66,
+        "expected_output": null,
+        "confidence": 0.34,
+        "cost": 1.0
+      }
+    ],
+    "quality_score": 0.511625,
+    "metadata": {
+      "num_insertions": 1,
+      "avg_utility": 0.34,
+      "total_cost": 1.0
+    }
+  },
+  {
+    "original_text": "I need kitchen appliances for a small apartment, space-saving designs.",
+    "augmented_text": "I need kitchen appliances for a small apartment, space-saving designs [VISUAL_SEARCH({'similarity_threshold': 0.8, 'image_description': 'I need kitchen appliances for a small apartment, space-saving designs'})]  [SEARCH(query='kitchen appliances for a small apartment, space-saving designs', category='general')] .",
+    "tool_calls": [
+      {
+        "tool_name": "search",
+        "arguments": {
+          "query": "kitchen appliances for a small apartment, space-saving designs",
+          "category": "general",
+          "max_results": 10
+        },
+        "position": 69,
+        "expected_output": null,
+        "confidence": 0.34,
+        "cost": 1.0
+      },
+      {
+        "tool_name": "visual_search",
+        "arguments": {
+          "similarity_threshold": 0.8,
+          "image_description": "I need kitchen appliances for a small apartment, space-saving designs"
+        },
+        "position": 69,
+        "expected_output": null,
+        "confidence": 0.31875,
+        "cost": 3.0
+      }
+    ],
+    "quality_score": 0.4319623142250531,
+    "metadata": {
+      "num_insertions": 2,
+      "avg_utility": 0.329375,
+      "total_cost": 4.0
+    }
+  }
+]

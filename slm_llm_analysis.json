@@ -1,0 +1,477 @@
+{
+  "slm_vs_llm_comparison": {
+    "quality_metrics": {
+      "response_coherence": {
+        "slm_avg": 0.8171919191919192,
+        "llm_avg": 0.8327272727272728,
+        "difference": 0.015535353535353513
+      },
+      "user_satisfaction": {
+        "slm_avg": 0.7155434343434344,
+        "llm_avg": 0.7889480519480518,
+        "difference": 0.07340461760461747
+      }
+    },
+    "efficiency_metrics": {
+      "response_time": {
+        "slm_avg": 1.1961970326112212,
+        "llm_avg": 0.5002821922302246,
+        "slm_faster_by": -0.6959148403809966
+      },
+      "cost_per_conversation": {
+        "slm_avg": 0.0002,
+        "llm_avg": 0.00104338,
+        "slm_cheaper_by": 0.00084338
+      }
+    }
+  },
+  "model_rankings": {
+    "by_quality": [
+      [
+        "LLM_gpt-4",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9976247189437621,
+          "ndcg_at_5": 0.9879423586850571,
+          "recall_at_1": 0.8,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.842,
+          "tool_selection_accuracy": 0.6590476190476191,
+          "conversation_flow_quality": 0.96,
+          "user_satisfaction_score": 0.8225142857142856,
+          "avg_response_time": 0.5002770900726319,
+          "total_tokens_used": 67.2,
+          "estimated_cost_usd": 0.0020358,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-4",
+          "model_type": "LLM"
+        }
+      ],
+      [
+        "SLM_llama-3.2-1b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9966721363355682,
+          "ndcg_at_5": 0.9948197672998209,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.8327878787878789,
+          "tool_selection_accuracy": 0.5933333333333333,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.7871151515151515,
+          "avg_response_time": 1.1980550694127814,
+          "total_tokens_used": 25.6,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "llama-3.2-1b",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "LLM_gpt-3.5-turbo",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 1.0,
+          "ndcg_at_5": 0.9949688590593423,
+          "recall_at_1": 0.8,
+          "recall_at_3": 0.8,
+          "recall_at_5": 0.8,
+          "response_coherence": 0.8234545454545454,
+          "tool_selection_accuracy": 0.48,
+          "conversation_flow_quality": 0.9399999999999998,
+          "user_satisfaction_score": 0.7553818181818182,
+          "avg_response_time": 0.5002872943878174,
+          "total_tokens_used": 50.6,
+          "estimated_cost_usd": 5.096e-05,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-3.5-turbo",
+          "model_type": "LLM"
+        }
+      ],
+      [
+        "SLM_phi-3-mini",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9967045520973692,
+          "ndcg_at_5": 0.9903615272395754,
+          "recall_at_1": 0.3,
+          "recall_at_3": 0.4,
+          "recall_at_5": 0.4,
+          "response_coherence": 0.8066666666666666,
+          "tool_selection_accuracy": 0.5533333333333333,
+          "conversation_flow_quality": 0.72,
+          "user_satisfaction_score": 0.7046666666666666,
+          "avg_response_time": 0.9987320626848387,
+          "total_tokens_used": 22.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 2000.0,
+          "model_name": "phi-3-mini",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "SLM_gemma-2b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9973874751031012,
+          "ndcg_at_5": 0.9931016665191675,
+          "recall_at_1": 0.2,
+          "recall_at_3": 0.2,
+          "recall_at_5": 0.2,
+          "response_coherence": 0.8121212121212121,
+          "tool_selection_accuracy": 0.18,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.6548484848484849,
+          "avg_response_time": 1.3918039657360435,
+          "total_tokens_used": 24.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "gemma-2b",
+          "model_type": "SLM"
+        }
+      ]
+    ],
+    "by_efficiency": [
+      [
+        "LLM_gpt-4",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9976247189437621,
+          "ndcg_at_5": 0.9879423586850571,
+          "recall_at_1": 0.8,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.842,
+          "tool_selection_accuracy": 0.6590476190476191,
+          "conversation_flow_quality": 0.96,
+          "user_satisfaction_score": 0.8225142857142856,
+          "avg_response_time": 0.5002770900726319,
+          "total_tokens_used": 67.2,
+          "estimated_cost_usd": 0.0020358,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-4",
+          "model_type": "LLM"
+        }
+      ],
+      [
+        "LLM_gpt-3.5-turbo",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 1.0,
+          "ndcg_at_5": 0.9949688590593423,
+          "recall_at_1": 0.8,
+          "recall_at_3": 0.8,
+          "recall_at_5": 0.8,
+          "response_coherence": 0.8234545454545454,
+          "tool_selection_accuracy": 0.48,
+          "conversation_flow_quality": 0.9399999999999998,
+          "user_satisfaction_score": 0.7553818181818182,
+          "avg_response_time": 0.5002872943878174,
+          "total_tokens_used": 50.6,
+          "estimated_cost_usd": 5.096e-05,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-3.5-turbo",
+          "model_type": "LLM"
+        }
+      ],
+      [
+        "SLM_phi-3-mini",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9967045520973692,
+          "ndcg_at_5": 0.9903615272395754,
+          "recall_at_1": 0.3,
+          "recall_at_3": 0.4,
+          "recall_at_5": 0.4,
+          "response_coherence": 0.8066666666666666,
+          "tool_selection_accuracy": 0.5533333333333333,
+          "conversation_flow_quality": 0.72,
+          "user_satisfaction_score": 0.7046666666666666,
+          "avg_response_time": 0.9987320626848387,
+          "total_tokens_used": 22.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 2000.0,
+          "model_name": "phi-3-mini",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "SLM_llama-3.2-1b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9966721363355682,
+          "ndcg_at_5": 0.9948197672998209,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.8327878787878789,
+          "tool_selection_accuracy": 0.5933333333333333,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.7871151515151515,
+          "avg_response_time": 1.1980550694127814,
+          "total_tokens_used": 25.6,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "llama-3.2-1b",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "SLM_gemma-2b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9973874751031012,
+          "ndcg_at_5": 0.9931016665191675,
+          "recall_at_1": 0.2,
+          "recall_at_3": 0.2,
+          "recall_at_5": 0.2,
+          "response_coherence": 0.8121212121212121,
+          "tool_selection_accuracy": 0.18,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.6548484848484849,
+          "avg_response_time": 1.3918039657360435,
+          "total_tokens_used": 24.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "gemma-2b",
+          "model_type": "SLM"
+        }
+      ]
+    ],
+    "by_cost": [
+      [
+        "LLM_gpt-3.5-turbo",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 1.0,
+          "ndcg_at_5": 0.9949688590593423,
+          "recall_at_1": 0.8,
+          "recall_at_3": 0.8,
+          "recall_at_5": 0.8,
+          "response_coherence": 0.8234545454545454,
+          "tool_selection_accuracy": 0.48,
+          "conversation_flow_quality": 0.9399999999999998,
+          "user_satisfaction_score": 0.7553818181818182,
+          "avg_response_time": 0.5002872943878174,
+          "total_tokens_used": 50.6,
+          "estimated_cost_usd": 5.096e-05,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-3.5-turbo",
+          "model_type": "LLM"
+        }
+      ],
+      [
+        "SLM_phi-3-mini",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9967045520973692,
+          "ndcg_at_5": 0.9903615272395754,
+          "recall_at_1": 0.3,
+          "recall_at_3": 0.4,
+          "recall_at_5": 0.4,
+          "response_coherence": 0.8066666666666666,
+          "tool_selection_accuracy": 0.5533333333333333,
+          "conversation_flow_quality": 0.72,
+          "user_satisfaction_score": 0.7046666666666666,
+          "avg_response_time": 0.9987320626848387,
+          "total_tokens_used": 22.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 2000.0,
+          "model_name": "phi-3-mini",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "SLM_gemma-2b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9973874751031012,
+          "ndcg_at_5": 0.9931016665191675,
+          "recall_at_1": 0.2,
+          "recall_at_3": 0.2,
+          "recall_at_5": 0.2,
+          "response_coherence": 0.8121212121212121,
+          "tool_selection_accuracy": 0.18,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.6548484848484849,
+          "avg_response_time": 1.3918039657360435,
+          "total_tokens_used": 24.4,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "gemma-2b",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "SLM_llama-3.2-1b",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9966721363355682,
+          "ndcg_at_5": 0.9948197672998209,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.8327878787878789,
+          "tool_selection_accuracy": 0.5933333333333333,
+          "conversation_flow_quality": 0.9199999999999999,
+          "user_satisfaction_score": 0.7871151515151515,
+          "avg_response_time": 1.1980550694127814,
+          "total_tokens_used": 25.6,
+          "estimated_cost_usd": 0.0002,
+          "memory_usage_mb": 1500.0,
+          "model_name": "llama-3.2-1b",
+          "model_type": "SLM"
+        }
+      ],
+      [
+        "LLM_gpt-4",
+        {
+          "ndcg_at_1": 1.0,
+          "ndcg_at_3": 0.9976247189437621,
+          "ndcg_at_5": 0.9879423586850571,
+          "recall_at_1": 0.8,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "response_coherence": 0.842,
+          "tool_selection_accuracy": 0.6590476190476191,
+          "conversation_flow_quality": 0.96,
+          "user_satisfaction_score": 0.8225142857142856,
+          "avg_response_time": 0.5002770900726319,
+          "total_tokens_used": 67.2,
+          "estimated_cost_usd": 0.0020358,
+          "memory_usage_mb": 0.0,
+          "model_name": "gpt-4",
+          "model_type": "LLM"
+        }
+      ]
+    ]
+  },
+  "detailed_results": {
+    "SLM_phi-3-mini": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9967045520973692,
+      "ndcg_at_5": 0.9903615272395754,
+      "recall_at_1": 0.3,
+      "recall_at_3": 0.4,
+      "recall_at_5": 0.4,
+      "response_coherence": 0.8066666666666666,
+      "tool_selection_accuracy": 0.5533333333333333,
+      "conversation_flow_quality": 0.72,
+      "user_satisfaction_score": 0.7046666666666666,
+      "avg_response_time": 0.9987320626848387,
+      "total_tokens_used": 22.4,
+      "estimated_cost_usd": 0.0002,
+      "memory_usage_mb": 2000.0,
+      "model_name": "phi-3-mini",
+      "model_type": "SLM"
+    },
+    "SLM_gemma-2b": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9973874751031012,
+      "ndcg_at_5": 0.9931016665191675,
+      "recall_at_1": 0.2,
+      "recall_at_3": 0.2,
+      "recall_at_5": 0.2,
+      "response_coherence": 0.8121212121212121,
+      "tool_selection_accuracy": 0.18,
+      "conversation_flow_quality": 0.9199999999999999,
+      "user_satisfaction_score": 0.6548484848484849,
+      "avg_response_time": 1.3918039657360435,
+      "total_tokens_used": 24.4,
+      "estimated_cost_usd": 0.0002,
+      "memory_usage_mb": 1500.0,
+      "model_name": "gemma-2b",
+      "model_type": "SLM"
+    },
+    "SLM_llama-3.2-1b": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9966721363355682,
+      "ndcg_at_5": 0.9948197672998209,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "response_coherence": 0.8327878787878789,
+      "tool_selection_accuracy": 0.5933333333333333,
+      "conversation_flow_quality": 0.9199999999999999,
+      "user_satisfaction_score": 0.7871151515151515,
+      "avg_response_time": 1.1980550694127814,
+      "total_tokens_used": 25.6,
+      "estimated_cost_usd": 0.0002,
+      "memory_usage_mb": 1500.0,
+      "model_name": "llama-3.2-1b",
+      "model_type": "SLM"
+    },
+    "LLM_gpt-4": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9976247189437621,
+      "ndcg_at_5": 0.9879423586850571,
+      "recall_at_1": 0.8,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "response_coherence": 0.842,
+      "tool_selection_accuracy": 0.6590476190476191,
+      "conversation_flow_quality": 0.96,
+      "user_satisfaction_score": 0.8225142857142856,
+      "avg_response_time": 0.5002770900726319,
+      "total_tokens_used": 67.2,
+      "estimated_cost_usd": 0.0020358,
+      "memory_usage_mb": 0.0,
+      "model_name": "gpt-4",
+      "model_type": "LLM"
+    },
+    "LLM_gpt-3.5-turbo": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 1.0,
+      "ndcg_at_5": 0.9949688590593423,
+      "recall_at_1": 0.8,
+      "recall_at_3": 0.8,
+      "recall_at_5": 0.8,
+      "response_coherence": 0.8234545454545454,
+      "tool_selection_accuracy": 0.48,
+      "conversation_flow_quality": 0.9399999999999998,
+      "user_satisfaction_score": 0.7553818181818182,
+      "avg_response_time": 0.5002872943878174,
+      "total_tokens_used": 50.6,
+      "estimated_cost_usd": 5.096e-05,
+      "memory_usage_mb": 0.0,
+      "model_name": "gpt-3.5-turbo",
+      "model_type": "LLM"
+    }
+  },
+  "slm_average": {
+    "model_type": "SLM",
+    "ndcg_at_1": 1.0,
+    "ndcg_at_3": 0.9969213878453461,
+    "ndcg_at_5": 0.9927609870195212,
+    "recall_at_1": 0.5,
+    "recall_at_3": 0.5333333333333333,
+    "recall_at_5": 0.5333333333333333,
+    "response_coherence": 0.8171919191919192,
+    "tool_selection_accuracy": 0.44222222222222224,
+    "conversation_flow_quality": 0.8533333333333332,
+    "user_satisfaction_score": 0.7155434343434344,
+    "avg_response_time": 1.1961970326112212,
+    "total_tokens_used": 24.133333333333336,
+    "estimated_cost_usd": 0.0002,
+    "memory_usage_mb": 1666.6666666666667
+  },
+  "llm_average": {
+    "model_type": "LLM",
+    "ndcg_at_1": 1.0,
+    "ndcg_at_3": 0.9988123594718811,
+    "ndcg_at_5": 0.9914556088721997,
+    "recall_at_1": 0.8,
+    "recall_at_3": 0.9,
+    "recall_at_5": 0.9,
+    "response_coherence": 0.8327272727272728,
+    "tool_selection_accuracy": 0.5695238095238095,
+    "conversation_flow_quality": 0.95,
+    "user_satisfaction_score": 0.7889480519480518,
+    "avg_response_time": 0.5002821922302246,
+    "total_tokens_used": 58.900000000000006,
+    "estimated_cost_usd": 0.00104338,
+    "memory_usage_mb": 0.0
+  }
+}

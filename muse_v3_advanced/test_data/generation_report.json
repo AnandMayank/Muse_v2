@@ -1,0 +1,39 @@
+{
+  "toolformer": {
+    "total": 1,
+    "augmented": 0,
+    "tool_calls": 0,
+    "avg_quality": 0.0
+  },
+  "dpo": {
+    "total_pairs": 0,
+    "avg_preference_score": NaN,
+    "rejection_types": {
+      "wrong_tool": 0,
+      "wrong_arguments": 0,
+      "wrong_order": 0
+    }
+  },
+  "rewards": {
+    "total_rewards": 0,
+    "avg_total_reward": NaN,
+    "avg_utility_delta": NaN
+  },
+  "validation": {
+    "toolformer_quality": {
+      "avg_quality_score": 0.0,
+      "high_quality_ratio": 0.0,
+      "total_augmented": 0
+    },
+    "dpo_quality": {
+      "avg_preference_score": 0.0,
+      "strong_preference_ratio": 0.0,
+      "total_pairs": 0
+    },
+    "reward_quality": {
+      "avg_total_reward": 0.0,
+      "positive_reward_ratio": 0.0,
+      "total_reward_samples": 0
+    }
+  }
+}

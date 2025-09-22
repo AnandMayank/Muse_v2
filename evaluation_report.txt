@@ -1,0 +1,66 @@
+================================================================================
+MUSE MODEL COMPARISON EVALUATION REPORT
+================================================================================
+
+📊 EVALUATION SUMMARY
+----------------------------------------
+Total Conversations Evaluated: 3
+Models Compared: Original MUSE, SFT, Dial-DPO
+Metrics: NDCG@1,3,5 | Recall@1,3,5 | Tool Accuracy | Response Relevance
+
+📈 PERFORMANCE COMPARISON
+----------------------------------------
+Metric                    Original     SFT          DPO         
+-----------------------------------------------------------------
+Ndcg At 1                 1.000        1.000        1.000       
+Ndcg At 3                 0.998        1.000        0.987       
+Ndcg At 5                 0.995        0.987        0.981       
+Recall At 1               0.200        0.200        0.200       
+Recall At 3               0.600        0.600        0.600       
+Recall At 5               1.000        1.000        1.000       
+Tool Selection Accuracy   0.869        0.887        0.892       
+Response Relevance        0.486        0.815        0.918       
+
+🚀 IMPROVEMENT ANALYSIS
+----------------------------------------
+SFT vs Original MUSE:
+  Ndcg At 1              :   +0.0%
+  Ndcg At 3              :   +0.2%
+  Ndcg At 5              :   -0.8%
+  Recall At 1            :   +0.0%
+  Recall At 3            :   +0.0%
+  Recall At 5            :   +0.0%
+  Tool Selection Accuracy:   +2.1%
+  Response Relevance     :  +67.5%
+
+Dial-DPO vs SFT:
+  Ndcg At 1              :   +0.0%
+  Ndcg At 3              :   -1.2%
+  Ndcg At 5              :   -0.7%
+  Recall At 1            :   +0.0%
+  Recall At 3            :   +0.0%
+  Recall At 5            :   +0.0%
+  Tool Selection Accuracy:   +0.6%
+  Response Relevance     :  +12.7%
+
+Dial-DPO vs Original MUSE:
+  Ndcg At 1              :   +0.0%
+  Ndcg At 3              :   -1.1%
+  Ndcg At 5              :   -1.5%
+  Recall At 1            :   +0.0%
+  Recall At 3            :   +0.0%
+  Recall At 5            :   +0.0%
+  Tool Selection Accuracy:   +2.7%
+  Response Relevance     :  +88.7%
+
+🎯 KEY INSIGHTS
+----------------------------------------
+⚠️  Original MUSE still competitive in NDCG@5
+✅ Dial-DPO achieves highest Recall@5 performance
+🏆 Overall Best Model: Dial-DPO Model (avg score: 0.822)
+
+💪 MODEL STRENGTHS
+----------------------------------------
+• Dial-DPO demonstrates better response relevance
+
+================================================================================

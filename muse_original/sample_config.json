@@ -1,0 +1,25 @@
+{
+  "api_settings": {
+    "base_url": "REPLACE_WITH_YOUR_API_BASE",
+    "api_key": "REPLACE_WITH_YOUR_API_KEY",
+    "model": "gpt-4o-mini",
+    "timeout": 60
+  },
+  "database_settings": {
+    "db_path": "REPLACE_WITH_DB_PATH",
+    "data_path": "REPLACE_WITH_DATA_PATH",
+    "model_path": "REPLACE_WITH_MODEL_PATH"
+  },
+  "generation_settings": {
+    "num_conversations": 1000,
+    "enable_tools": true,
+    "enable_multimodal": true,
+    "enable_personas": true,
+    "failure_rate": 0.15
+  },
+  "output_settings": {
+    "output_dir": "enhanced_muse_output",
+    "save_individual_conversations": true,
+    "save_training_data": true
+  }
+}

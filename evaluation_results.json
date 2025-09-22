@@ -1,0 +1,77 @@
+{
+  "evaluation_timestamp": "2025-09-20 10:30:17",
+  "total_conversations": 3,
+  "models_evaluated": [
+    "Original MUSE",
+    "SFT",
+    "Dial-DPO"
+  ],
+  "results": {
+    "original_muse": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9979027042544044,
+      "ndcg_at_5": 0.9952143324167936,
+      "recall_at_1": 0.20000000000000004,
+      "recall_at_3": 0.6,
+      "recall_at_5": 1.0,
+      "tool_selection_accuracy": 0.8688986054064834,
+      "response_relevance": 0.4864303752390024,
+      "avg_execution_time": 3.743171691894531e-05
+    },
+    "sft_model": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9995884517050412,
+      "ndcg_at_5": 0.9872508996354288,
+      "recall_at_1": 0.20000000000000004,
+      "recall_at_3": 0.6,
+      "recall_at_5": 1.0,
+      "tool_selection_accuracy": 0.8870166252069435,
+      "response_relevance": 0.8146488697718134,
+      "avg_execution_time": 1.7563501993815105e-05
+    },
+    "dial_dpo_model": {
+      "ndcg_at_1": 1.0,
+      "ndcg_at_3": 0.9871066112982704,
+      "ndcg_at_5": 0.9807435416367586,
+      "recall_at_1": 0.20000000000000004,
+      "recall_at_3": 0.6,
+      "recall_at_5": 1.0,
+      "tool_selection_accuracy": 0.8923155537915046,
+      "response_relevance": 0.9177164247910272,
+      "avg_execution_time": 1.915295918782552e-05
+    },
+    "improvement_sft_vs_original": {
+      "ndcg_at_1": 0.0,
+      "ndcg_at_3": 0.16892903921893798,
+      "ndcg_at_5": -0.800172638393006,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "tool_selection_accuracy": 2.0851707768576913,
+      "response_relevance": 67.47491752988171,
+      "avg_execution_time": -53.07855626326964
+    },
+    "improvement_dpo_vs_sft": {
+      "ndcg_at_1": 0.0,
+      "ndcg_at_3": -1.2486979401852825,
+      "ndcg_at_5": -0.6591392320911761,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "tool_selection_accuracy": 0.5973877415572569,
+      "response_relevance": 12.651776592789417,
+      "avg_execution_time": 9.049773755656094
+    },
+    "improvement_dpo_vs_original": {
+      "ndcg_at_1": 0.0,
+      "ndcg_at_3": -1.0818783143994462,
+      "ndcg_at_5": -1.454037618700075,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "tool_selection_accuracy": 2.6950150730264304,
+      "response_relevance": 88.66346994472066,
+      "avg_execution_time": -48.832271762208066
+    }
+  }
+}

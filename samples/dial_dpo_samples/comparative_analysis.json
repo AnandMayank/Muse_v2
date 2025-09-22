@@ -1,0 +1,285 @@
+{
+  "comparative_study": {
+    "methodology": "Side-by-side comparison of SFT baseline vs SFT+Dial-DPO improved responses",
+    "evaluation_date": "2024-08-19",
+    "sample_size": 100,
+    "evaluation_metrics": ["tool_selection_accuracy", "argument_quality", "execution_order", "user_satisfaction"]
+  },
+  
+  "examples": [
+    {
+      "example_id": "casual_shirt_shopping",
+      "user_input": "मुझे casual shirts चाहिए under 2000 office के लिए",
+      "sft_baseline": {
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "casual shirts",
+              "max_price": 2000
+            },
+            "reasoning": "Simple search without considering office context",
+            "quality_issues": [
+              "Missed 'office' context - casual shirts may not be office appropriate",
+              "No consideration of formal/semi-formal requirements",
+              "Generic search without style refinement"
+            ]
+          }
+        ],
+        "response_quality": 2.8,
+        "tool_appropriateness": 0.65,
+        "argument_completeness": 0.72
+      },
+      "sft_dpo_improved": {
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "semi-formal shirts office wear",
+              "max_price": 2000,
+              "style": "business casual",
+              "occasion": "office"
+            },
+            "reasoning": "Understood office context and refined search to business casual"
+          },
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "style": ["formal", "semi-formal"],
+              "color": ["white", "light blue", "grey"],
+              "collar_type": "regular"
+            },
+            "reasoning": "Applied office-appropriate filters"
+          }
+        ],
+        "response_quality": 4.2,
+        "tool_appropriateness": 0.91,
+        "argument_completeness": 0.89,
+        "improvements": [
+          "Correctly interpreted 'casual shirts for office' as business casual",
+          "Added appropriate style and occasion filters",
+          "Better understanding of professional dress code context"
+        ]
+      },
+      "improvement_metrics": {
+        "tool_selection": "+26% (more appropriate tools)",
+        "argument_quality": "+17% (better context understanding)",
+        "execution_order": "+15% (logical progression)",
+        "user_utility": "+50% (higher satisfaction with relevant results)"
+      }
+    },
+    
+    {
+      "example_id": "hindi_educational_toys",
+      "user_input": "बच्चों के लिए educational toys चाहिए जो Hindi में भी पढ़ाएं",
+      "sft_baseline": {
+        "tool_calls": [
+          {
+            "tool_name": "search", 
+            "arguments": {
+              "query": "educational toys children",
+              "language": "hindi"
+            },
+            "quality_issues": [
+              "Missed the bilingual requirement (Hindi + English learning)",
+              "No age specification asked",
+              "Didn't consider educational methodology"
+            ]
+          }
+        ],
+        "response_quality": 2.5,
+        "tool_appropriateness": 0.61,
+        "argument_completeness": 0.58
+      },
+      "sft_dpo_improved": {
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "bilingual educational toys Hindi English",
+              "category": "toys",
+              "age_group": "3-8 years",
+              "learning_type": "bilingual"
+            },
+            "reasoning": "Understood bilingual learning requirement and added age consideration"
+          },
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "language_support": ["hindi", "english"],
+              "educational_value": "high",
+              "learning_method": ["interactive", "phonics", "vocabulary"]
+            },
+            "reasoning": "Applied educational methodology filters for effective bilingual learning"
+          },
+          {
+            "tool_name": "recommend",
+            "arguments": {
+              "user_preferences": {
+                "language_priority": "hindi_english_bilingual",
+                "educational_focus": true,
+                "age_appropriate": true
+              }
+            },
+            "reasoning": "Personalized recommendations based on bilingual learning goals"
+          }
+        ],
+        "response_quality": 4.3,
+        "tool_appropriateness": 0.94,
+        "argument_completeness": 0.92,
+        "improvements": [
+          "Correctly identified bilingual learning requirement",
+          "Added age-appropriate considerations", 
+          "Included educational methodology in filtering",
+          "Provided personalized recommendations"
+        ]
+      },
+      "improvement_metrics": {
+        "tool_selection": "+33% (better tool sequence)",
+        "argument_quality": "+34% (comprehensive parameters)",
+        "execution_order": "+25% (logical workflow)",
+        "user_utility": "+68% (more relevant educational toys)"
+      }
+    },
+    
+    {
+      "example_id": "laptop_comparison_complex",
+      "user_input": "Programming के लिए laptop chahiye, budget 80k, compare top 3 options with detailed specs",
+      "sft_baseline": {
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "programming laptop",
+              "max_price": 80000
+            }
+          },
+          {
+            "tool_name": "compare", 
+            "arguments": {
+              "num_items": 3
+            },
+            "quality_issues": [
+              "No specification of comparison attributes",
+              "Didn't consider programming requirements (RAM, processor, etc.)",
+              "Generic comparison without technical details"
+            ]
+          }
+        ],
+        "response_quality": 2.9,
+        "tool_appropriateness": 0.70,
+        "argument_completeness": 0.63
+      },
+      "sft_dpo_improved": {
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "programming laptop development coding",
+              "max_price": 80000,
+              "min_ram": "16GB",
+              "processor_type": "i7_or_equivalent", 
+              "storage_type": "SSD",
+              "use_case": "programming"
+            },
+            "reasoning": "Comprehensive search with programming-specific requirements"
+          },
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "performance_tier": "high",
+              "ram": ">=16GB",
+              "processor": ["i7", "ryzen7", "m1_pro"],
+              "graphics": "dedicated_or_integrated_high_end",
+              "build_quality": "premium"
+            },
+            "reasoning": "Applied programming performance filters"
+          },
+          {
+            "tool_name": "compare",
+            "arguments": {
+              "items": 3,
+              "comparison_attributes": [
+                "processor_specs",
+                "ram_capacity", 
+                "storage_details",
+                "graphics_performance",
+                "build_quality",
+                "price_performance_ratio",
+                "warranty_support",
+                "user_reviews_programming"
+              ],
+              "detailed_specs": true
+            },
+            "reasoning": "Comprehensive comparison with programming-relevant attributes"
+          }
+        ],
+        "response_quality": 4.5,
+        "tool_appropriateness": 0.95,
+        "argument_completeness": 0.94,
+        "improvements": [
+          "Added programming-specific search criteria",
+          "Included performance requirements (RAM, CPU, SSD)",
+          "Comprehensive comparison with technical specifications",
+          "Considered programming workflow needs"
+        ]
+      },
+      "improvement_metrics": {
+        "tool_selection": "+25% (better sequence)",
+        "argument_quality": "+31% (comprehensive parameters)",
+        "execution_order": "+20% (logical flow)",
+        "user_utility": "+45% (more informed purchase decision)"
+      }
+    }
+  ],
+  
+  "aggregate_improvements": {
+    "overall_statistics": {
+      "sample_size": 100,
+      "evaluation_period": "August 2024",
+      "human_evaluators": 5
+    },
+    "improvement_summary": {
+      "tool_selection_accuracy": {
+        "sft_baseline": "68.4%",
+        "sft_dpo": "91.2%", 
+        "improvement": "+22.8%"
+      },
+      "argument_quality_score": {
+        "sft_baseline": "3.1/5",
+        "sft_dpo": "4.2/5",
+        "improvement": "+35.5%"
+      },
+      "execution_order_quality": {
+        "sft_baseline": "2.8/5", 
+        "sft_dpo": "3.9/5",
+        "improvement": "+39.3%"
+      },
+      "user_satisfaction": {
+        "sft_baseline": "3.2/5",
+        "sft_dpo": "4.3/5", 
+        "improvement": "+34.4%"
+      },
+      "response_relevance": {
+        "sft_baseline": "76.3%",
+        "sft_dpo": "89.1%",
+        "improvement": "+12.8%"
+      }
+    },
+    "key_improvements": [
+      "Better contextual understanding of user intent",
+      "More appropriate tool selection based on conversation context", 
+      "Comprehensive argument generation with relevant parameters",
+      "Logical execution order in multi-step workflows",
+      "Improved handling of cross-lingual and cultural contexts",
+      "Enhanced preference learning from user feedback"
+    ],
+    "dpo_training_benefits": {
+      "preference_learning": "Learns from human preferences to improve tool selection",
+      "contextual_reasoning": "Better understanding of when and how to use tools",
+      "argument_quality": "More complete and relevant tool arguments",
+      "workflow_optimization": "Improved multi-step execution planning",
+      "user_adaptation": "Better adaptation to user preferences and context"
+    }
+  }
+}

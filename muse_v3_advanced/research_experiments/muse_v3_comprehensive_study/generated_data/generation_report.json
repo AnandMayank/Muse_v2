@@ -1,0 +1,40 @@
+{
+  "toolformer": {
+    "total": 15,
+    "augmented": 13,
+    "tool_calls": 18,
+    "avg_quality": 0.47282252583851847,
+    "avg_calls_per_context": 1.3846153846153846
+  },
+  "dpo": {
+    "total_pairs": 13,
+    "avg_preference_score": 0.36317391966040574,
+    "rejection_types": {
+      "wrong_tool": 13,
+      "wrong_arguments": 0,
+      "wrong_order": 0
+    }
+  },
+  "rewards": {
+    "total_rewards": 18,
+    "avg_total_reward": 0.3957777777777778,
+    "avg_utility_delta": 0.2555555555555556
+  },
+  "validation": {
+    "toolformer_quality": {
+      "avg_quality_score": 0.47282252583851836,
+      "high_quality_ratio": 0.0,
+      "total_augmented": 13
+    },
+    "dpo_quality": {
+      "avg_preference_score": 0.36317391966040574,
+      "strong_preference_ratio": 0.07692307692307693,
+      "total_pairs": 13
+    },
+    "reward_quality": {
+      "avg_total_reward": 0.3957777777777778,
+      "positive_reward_ratio": 1.0,
+      "total_reward_samples": 18
+    }
+  }
+}

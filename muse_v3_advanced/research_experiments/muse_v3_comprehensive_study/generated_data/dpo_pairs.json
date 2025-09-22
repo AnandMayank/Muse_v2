@@ -1,0 +1,589 @@
+[
+  {
+    "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+          }
+        },
+        "position": 94
+      },
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+          }
+        },
+        "position": 94
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "filter",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+          }
+        },
+        "position": 94
+      },
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Can you recommend a good smartphone for photography? I mostly take pictures of food and travel"
+          }
+        },
+        "position": 94
+      }
+    ],
+    "preference_score": 0.5779816487248547,
+    "metadata": {
+      "chosen_score": 1.72,
+      "rejected_score": 0.4600000000000001,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "\u092e\u0941\u091d\u0947 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0915\u093f\u0924\u093e\u092c \u091a\u093e\u0939\u093f\u090f\u0964 \u0915\u0941\u091b \u0930\u094b\u092e\u093e\u0902\u091f\u093f\u0915 \u092f\u093e mystery genre \u092e\u0947\u0902\u0964",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "translate",
+          "arguments": {
+            "text": "\u092e\u0941\u091d\u0947 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0915\u093f\u0924\u093e\u092c \u091a\u093e\u0939\u093f\u090f\u0964 \u0915\u0941\u091b \u0930\u094b\u092e\u093e\u0902\u091f\u093f\u0915 \u092f\u093e mystery genre \u092e\u0947\u0902\u0964",
+            "source_lang": "auto",
+            "target_lang": "hi"
+          }
+        },
+        "position": 61
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "text": "\u092e\u0941\u091d\u0947 \u090f\u0915 \u0905\u091a\u094d\u091b\u0940 \u0915\u093f\u0924\u093e\u092c \u091a\u093e\u0939\u093f\u090f\u0964 \u0915\u0941\u091b \u0930\u094b\u092e\u093e\u0902\u091f\u093f\u0915 \u092f\u093e mystery genre \u092e\u0947\u0902\u0964",
+            "source_lang": "auto",
+            "target_lang": "hi"
+          }
+        },
+        "position": 61
+      }
+    ],
+    "preference_score": 0.48091602686323637,
+    "metadata": {
+      "chosen_score": 0.97,
+      "rejected_score": 0.3400000000000001,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "I want to compare iPhone 15 vs Samsung Galaxy S24. Which has better camera?",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "items": [
+              "I want to compare ",
+              "iPhone",
+              " 15 vs Samsung "
+            ],
+            "comparison_aspects": [
+              "price",
+              "features",
+              "reviews"
+            ]
+          }
+        },
+        "position": 49
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "translate",
+          "arguments": {
+            "items": [
+              "I want to compare ",
+              "iPhone",
+              " 15 vs Samsung "
+            ],
+            "comparison_aspects": [
+              "price",
+              "features",
+              "reviews"
+            ]
+          }
+        },
+        "position": 49
+      }
+    ],
+    "preference_score": 0.17283950510592905,
+    "metadata": {
+      "chosen_score": 0.9500000000000001,
+      "rejected_score": 0.6699999999999999,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Show me dresses similar to this image that are suitable for office wear.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "Show me dresses similar to this image that are sui",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 71
+      },
+      {
+        "tool_call": {
+          "tool_name": "visual_search",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "Show me dresses similar to this image that are suitable for office wear"
+          }
+        },
+        "position": 71
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "query": "Show me dresses similar to this image that are sui",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 71
+      },
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "Show me dresses similar to this image that are suitable for office wear"
+          }
+        },
+        "position": 71
+      }
+    ],
+    "preference_score": 0.25688073276660217,
+    "metadata": {
+      "chosen_score": 1.37,
+      "rejected_score": 0.81,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Find me a laptop for gaming with good graphics card under $1500.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Find me a laptop for gaming with good graphics card under $1500"
+          }
+        },
+        "position": 63
+      },
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "me a laptop for gaming with good graphics card under $1500",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 63
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "filter",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Find me a laptop for gaming with good graphics card under $1500"
+          }
+        },
+        "position": 63
+      },
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "query": "me a laptop for gaming with good graphics card under $1500",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 63
+      }
+    ],
+    "preference_score": 0.22743682228362155,
+    "metadata": {
+      "chosen_score": 1.7,
+      "rejected_score": 1.07,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "I need help translating this product description to Hindi.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "help translating this product description to Hindi",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 57
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "query": "help translating this product description to Hindi",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 57
+      }
+    ],
+    "preference_score": 0.44615384272189357,
+    "metadata": {
+      "chosen_score": 0.9400000000000001,
+      "rejected_score": 0.36000000000000004,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "What are the best wireless headphones for working out?",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "What are the best wireless headphones for working out?"
+          }
+        },
+        "position": 54
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "filter",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "What are the best wireless headphones for working out?"
+          }
+        },
+        "position": 54
+      }
+    ],
+    "preference_score": 0.4999999960937501,
+    "metadata": {
+      "chosen_score": 0.9600000000000001,
+      "rejected_score": 0.32,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Compare these two jackets - which one is better for winter?",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "items": [
+              "Compare these two ",
+              "jackets",
+              "which one is better "
+            ],
+            "comparison_aspects": [
+              "price",
+              "features",
+              "reviews"
+            ]
+          }
+        },
+        "position": 59
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "items": [
+              "Compare these two ",
+              "jackets",
+              "which one is better "
+            ],
+            "comparison_aspects": [
+              "price",
+              "features",
+              "reviews"
+            ]
+          }
+        },
+        "position": 59
+      }
+    ],
+    "preference_score": 0.4728682133886185,
+    "metadata": {
+      "chosen_score": 0.9500000000000001,
+      "rejected_score": 0.3400000000000001,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Recommend something similar to this dress but in a different color.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Recommend something similar to this dress but in a different color"
+          }
+        },
+        "position": 66
+      },
+      {
+        "tool_call": {
+          "tool_name": "visual_search",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "Recommend something similar to this dress but in a different color"
+          }
+        },
+        "position": 66
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "num_items": 5,
+            "user_profile": "general",
+            "context": "Recommend something similar to this dress but in a different color"
+          }
+        },
+        "position": 66
+      },
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "Recommend something similar to this dress but in a different color"
+          }
+        },
+        "position": 66
+      }
+    ],
+    "preference_score": 0.36290322434313216,
+    "metadata": {
+      "chosen_score": 1.69,
+      "rejected_score": 0.79,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Find me skincare products for sensitive skin, preferably organic.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "me skincare products for sensitive skin, preferably organic",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 64
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "recommend",
+          "arguments": {
+            "query": "me skincare products for sensitive skin, preferably organic",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 64
+      }
+    ],
+    "preference_score": 0.44615384272189357,
+    "metadata": {
+      "chosen_score": 0.9400000000000001,
+      "rejected_score": 0.36000000000000004,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "\u092e\u0941\u091d\u0947 \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f educational toys \u091a\u093e\u0939\u093f\u090f \u091c\u094b safe \u0939\u094b\u0902\u0964",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "translate",
+          "arguments": {
+            "text": "\u092e\u0941\u091d\u0947 \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f educational toys \u091a\u093e\u0939\u093f\u090f \u091c\u094b safe \u0939\u094b\u0902\u0964",
+            "source_lang": "auto",
+            "target_lang": "hi"
+          }
+        },
+        "position": 54
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "text": "\u092e\u0941\u091d\u0947 \u092c\u091a\u094d\u091a\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f educational toys \u091a\u093e\u0939\u093f\u090f \u091c\u094b safe \u0939\u094b\u0902\u0964",
+            "source_lang": "auto",
+            "target_lang": "hi"
+          }
+        },
+        "position": 54
+      }
+    ],
+    "preference_score": 0.48091602686323637,
+    "metadata": {
+      "chosen_score": 0.97,
+      "rejected_score": 0.3400000000000001,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "Help me find a gift for my tech-savvy teenager, budget around $200.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "a gift for my tech-savvy teenager, budget around $200",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 66
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "query": "a gift for my tech-savvy teenager, budget around $200",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 66
+      }
+    ],
+    "preference_score": 0.18238993595981173,
+    "metadata": {
+      "chosen_score": 0.9400000000000001,
+      "rejected_score": 0.65,
+      "rejection_type": "wrong_tool"
+    }
+  },
+  {
+    "context": "I need kitchen appliances for a small apartment, space-saving designs.",
+    "chosen_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "query": "kitchen appliances for a small apartment, space-saving designs",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 69
+      },
+      {
+        "tool_call": {
+          "tool_name": "visual_search",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "I need kitchen appliances for a small apartment, space-saving designs"
+          }
+        },
+        "position": 69
+      }
+    ],
+    "rejected_trajectory": [
+      {
+        "tool_call": {
+          "tool_name": "compare",
+          "arguments": {
+            "query": "kitchen appliances for a small apartment, space-saving designs",
+            "category": "general",
+            "max_results": 10
+          }
+        },
+        "position": 69
+      },
+      {
+        "tool_call": {
+          "tool_name": "search",
+          "arguments": {
+            "similarity_threshold": 0.8,
+            "image_description": "I need kitchen appliances for a small apartment, space-saving designs"
+          }
+        },
+        "position": 69
+      }
+    ],
+    "preference_score": 0.11382113774869458,
+    "metadata": {
+      "chosen_score": 1.37,
+      "rejected_score": 1.09,
+      "rejection_type": "wrong_tool"
+    }
+  }
+]

@@ -1,0 +1,52 @@
+# MUSE Core Dependencies
+# Core ML and AI libraries
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+clip-by-openai>=1.0
+
+# Data processing
+numpy>=1.21.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+Pillow>=9.0.0
+
+# NLP and multimodal
+huggingface-hub>=0.17.0
+tokenizers>=0.14.0
+datasets>=2.14.0
+
+# Conversation and orchestration  
+langgraph>=0.1.0
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# Training and optimization
+accelerate>=0.24.0
+deepspeed>=0.12.0
+wandb>=0.16.0
+tensorboard>=2.14.0
+
+# API and web framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+gradio>=4.0.0
+
+# Utilities
+tqdm>=4.65.0
+rich>=13.0.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+jsonlines>=3.1.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.6.0
+
+# Optional but recommended
+faiss-cpu>=1.7.4  # For vector search (use faiss-gpu if CUDA available)
+redis>=5.0.0      # For caching
+psutil>=5.9.0     # For system monitoring

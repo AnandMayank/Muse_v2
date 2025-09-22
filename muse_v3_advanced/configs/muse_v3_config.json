@@ -1,0 +1,44 @@
+{
+  "system": {
+    "name": "MUSE v3 Advanced",
+    "version": "3.0.0",
+    "environment": "development",
+    "debug_mode": true
+  },
+  "data": {
+    "base_path": "/media/adityapachauri/second_drive/Muse",
+    "models_dir": "./models",
+    "logs_dir": "./logs",
+    "cache_dir": "./cache"
+  },
+  "architecture": {
+    "text_dim": 768,
+    "image_dim": 512,
+    "metadata_dim": 256,
+    "fusion_dim": 512,
+    "hidden_dim": 256,
+    "num_intents": 7,
+    "state_dim": 128,
+    "num_tools": 6,
+    "device": "cuda"
+  },
+  "languages": {
+    "supported": [
+      "en",
+      "hi"
+    ],
+    "default": "en",
+    "auto_detect": true,
+    "translation_enabled": true
+  },
+  "tools": {
+    "search_enabled": true,
+    "recommend_enabled": true,
+    "compare_enabled": true,
+    "filter_enabled": true,
+    "translate_enabled": true,
+    "visual_search_enabled": true,
+    "max_results": 10,
+    "timeout": 30.0
+  }
+}

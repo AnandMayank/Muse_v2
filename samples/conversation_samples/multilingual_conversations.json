@@ -1,0 +1,206 @@
+[
+  {
+    "conversation_id": "conv_hindi_001",
+    "language": "hindi",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user_input": "मुझे बच्चों के लिए educational toys चाहिए जो सिखाने में मदद करें",
+        "system_response": "बिल्कुल! मैं आपके लिए educational toys ढूंढ सकता हूं जो बच्चों की सीखने में मदद करते हैं। आपके बच्चे की उम्र कितनी है?",
+        "intent": "search",
+        "entities": {
+          "category": "toys",
+          "subcategory": "educational",
+          "target_audience": "children"
+        }
+      },
+      {
+        "turn_id": 2, 
+        "user_input": "5 साल की उम्र के लिए और budget 3000 तक है",
+        "system_response": "बेहतरीन! 5 साल के बच्चों के लिए मैं कुछ अच्छे educational toys सुझाऊंगा जो आपके 3000 रुपये के budget में हैं।",
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "educational toys for 5 year olds",
+              "max_price": 3000,
+              "age_group": "5 years",
+              "category": "toys"
+            },
+            "execution_result": "Found 15 matching educational toys"
+          }
+        ],
+        "intent": "search_with_constraints"
+      },
+      {
+        "turn_id": 3,
+        "user_input": "जो STEM learning में help करे वो बेहतर होगा",
+        "system_response": "STEM learning के लिए perfect! मैं आपको science, math और problem-solving skills develop करने वाले toys दिखाता हूं।",
+        "tool_calls": [
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "previous_results": "search_results_001",
+              "filter_criteria": {
+                "learning_type": "STEM",
+                "skills": ["science", "math", "problem_solving"]
+              }
+            }
+          },
+          {
+            "tool_name": "recommend",
+            "arguments": {
+              "user_preferences": {
+                "age": 5,
+                "budget": 3000,
+                "learning_focus": "STEM"
+              },
+              "num_recommendations": 5
+            }
+          }
+        ]
+      }
+    ],
+    "conversation_metadata": {
+      "total_turns": 3,
+      "satisfaction_score": 4.3,
+      "language_switches": 2,
+      "tools_used": ["search", "filter", "recommend"],
+      "conversation_outcome": "successful_recommendation"
+    }
+  },
+  {
+    "conversation_id": "conv_english_002", 
+    "language": "english",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user_input": "I need a formal shirt for an important business meeting next week",
+        "system_response": "I'd be happy to help you find the perfect formal shirt for your business meeting. What's your preferred color and size?",
+        "intent": "search",
+        "entities": {
+          "category": "clothing",
+          "subcategory": "shirts", 
+          "style": "formal",
+          "occasion": "business meeting"
+        }
+      },
+      {
+        "turn_id": 2,
+        "user_input": "Size L, prefer white or light blue, budget around 2500 rupees",
+        "system_response": "Perfect! Let me find formal shirts in white and light blue, size L, within your 2500 rupee budget.",
+        "tool_calls": [
+          {
+            "tool_name": "search",
+            "arguments": {
+              "query": "formal shirts men",
+              "size": "L",
+              "color": ["white", "light blue"],
+              "max_price": 2500,
+              "occasion": "business"
+            }
+          }
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user_input": "Show me the top 3 options and compare them",
+        "system_response": "Here are the top 3 formal shirts that match your criteria. Let me compare them for you:",
+        "tool_calls": [
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "previous_results": "search_results_002",
+              "limit": 3,
+              "sort_by": "rating_and_price"
+            }
+          },
+          {
+            "tool_name": "compare",
+            "arguments": {
+              "items": ["shirt_001", "shirt_002", "shirt_003"],
+              "comparison_attributes": ["price", "rating", "material", "brand", "reviews"]
+            }
+          }
+        ]
+      }
+    ],
+    "conversation_metadata": {
+      "total_turns": 3,
+      "satisfaction_score": 4.5,
+      "tools_used": ["search", "filter", "compare"],
+      "conversation_outcome": "successful_comparison"
+    }
+  },
+  {
+    "conversation_id": "conv_mixed_003",
+    "language": "mixed",
+    "turns": [
+      {
+        "turn_id": 1, 
+        "user_input": "मुझे laptop चाहिए programming के लिए, budget है 80000 तक",
+        "system_response": "Great choice for programming! I'll help you find a laptop within 80,000 rupees that's perfect for development work. कौन सा programming language mainly use करते हैं आप?",
+        "intent": "search",
+        "entities": {
+          "category": "electronics",
+          "subcategory": "laptop",
+          "use_case": "programming",
+          "budget": 80000
+        }
+      },
+      {
+        "turn_id": 2,
+        "user_input": "Python और web development mainly, और gaming भी occasionally करता हूं",
+        "system_response": "Perfect! Python और web development के साथ gaming के लिए भी suitable laptop चाहिए। Let me find laptops with good processors and graphics cards।",
+        "tool_calls": [
+          {
+            "tool_name": "search", 
+            "arguments": {
+              "query": "programming laptop gaming",
+              "max_price": 80000,
+              "use_case": ["programming", "web development", "gaming"],
+              "min_ram": "16GB",
+              "processor": "i7 or equivalent"
+            }
+          }
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user_input": "Screen size 15 inch ya usse zyada hona chahiye, और SSD compulsory hai",
+        "system_response": "बिल्कुल right requirements! 15+ inch screen with SSD storage programming के लिए बहुत important है। Let me filter the results accordingly।",
+        "tool_calls": [
+          {
+            "tool_name": "filter",
+            "arguments": {
+              "previous_results": "search_results_003", 
+              "filter_criteria": {
+                "screen_size": ">=15 inch",
+                "storage_type": "SSD",
+                "storage_capacity": ">=512GB"
+              }
+            }
+          },
+          {
+            "tool_name": "recommend",
+            "arguments": {
+              "user_profile": {
+                "use_case": ["programming", "web_dev", "gaming"],
+                "budget": 80000,
+                "preferences": ["large_screen", "SSD", "performance"]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "conversation_metadata": {
+      "total_turns": 3,
+      "satisfaction_score": 4.4,
+      "language_switches": 8,
+      "code_switching_points": ["laptop", "programming", "gaming", "web development", "SSD"],
+      "tools_used": ["search", "filter", "recommend"],
+      "conversation_outcome": "successful_recommendation"
+    }
+  }
+]

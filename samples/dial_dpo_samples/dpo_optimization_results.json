@@ -1,0 +1,53 @@
+{
+  "efficiency_analysis": {},
+  "optimization_targets": {
+    "personalization": 13,
+    "success_rate": 11,
+    "content_quality": 26,
+    "response_conciseness": 3,
+    "engagement_optimization": 5
+  },
+  "learning_priorities": {
+    "high": 25,
+    "medium": 28,
+    "low": 5
+  },
+  "metric_distributions": {
+    "response_time_simulation": {
+      "mean": 0.6986206896551723,
+      "std": 0.148456986407907,
+      "min": 0.5,
+      "max": 0.9199999999999999
+    },
+    "information_density": {
+      "mean": 0.47826877680823265,
+      "std": 0.10996183182050293,
+      "min": 0.2142857142857143,
+      "max": 0.6538461538461539
+    },
+    "user_satisfaction_proxy": {
+      "mean": 0.8045977011494251,
+      "std": 0.3624336787454612,
+      "min": 0.16666666666666669,
+      "max": 1.5
+    },
+    "conversation_completion": {
+      "mean": 0.5689655172413793,
+      "std": 0.5528006738579793,
+      "min": -0.5,
+      "max": 1.5
+    },
+    "context_utilization": {
+      "mean": 0.5258620689655172,
+      "std": 0.2486587086526889,
+      "min": -0.25,
+      "max": 1.0
+    },
+    "multimodal_efficiency": {
+      "mean": 0.5310344827586208,
+      "std": 0.09136304344477085,
+      "min": 0.5,
+      "max": 0.8
+    }
+  }
+}

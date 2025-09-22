@@ -1,0 +1,11 @@
+[
+  {
+    "original_text": "Find me running shoes under $100",
+    "augmented_text": "Find me running shoes under $100",
+    "tool_calls": [],
+    "quality_score": 0.0,
+    "metadata": {
+      "reason": "no_suitable_insertions"
+    }
+  }
+]
